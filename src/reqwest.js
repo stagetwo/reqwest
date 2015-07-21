@@ -6,6 +6,9 @@
 
   var context = this
 
+  // test for 'hasOwnProperty' and shim if neccesary
+  context.hasOwnProperty = context.hasOwnProperty || Object.prototype.hasOwnProperty;
+
   if (context.hasOwnProperty('window')) {
     var doc = document
       , byTag = 'getElementsByTagName'
